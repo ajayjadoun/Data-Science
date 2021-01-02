@@ -1,0 +1,26 @@
+import pandas as pd
+# pandas series
+# make the veriable and make first a ditionary data on it:
+x_variable={"Name":['Ajay singh jadoun','Aman sharma','Aditya mishra','Suresh yadav'],"age":[20,20,21,24]}
+
+
+# use the pandas module for import the series with assigne a new variable
+make_new=pd.DataFrame(x_variable)
+# want to add your data file in real world data:
+# then use the statement
+make_new.to_csv("python file.csv")
+print(make_new)
+# while print the two statement then use tail() function
+print(make_new.tail(2))
+
+# while print the any 5 last  statement then use head() function
+print(make_new.head())
+
+# while print the indexing statement then use index() function
+print(make_new.index)
+
+# while print Data type statement then use dtypes()  function
+print(make_new.dtypes)
+# want to perform all the operation like mean,max,mediam,mode,max,etc play the function describe()
+print(make_new.describe())
+# print()
