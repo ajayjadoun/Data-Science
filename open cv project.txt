@@ -1,0 +1,177 @@
+ # # cv2.destroyAllWindows()
+
+face image recogination
+def photoread():
+    img=cv2.imread("C:\\Users\Ajay Singh Jadoun\Pictures\\aajay.jpg")
+    print(img)
+    # cv2.imshow("that is answer")
+    # print(img)
+
+    cascade1=cv2.CascadeClassifier('C:\\Users\Ajay Singh Jadoun\Downloads\\\haarcascade_frontalface_default.xml')
+    # img1=cv2.resize(img,(int(img.shape[1]/2),int(img.shape[0]/2)))
+    # img1=cv2.resize(img,(int(img.shape[1]/2),int(img.shape[0]/2)))
+    # gray=cv2.cvtcolor(img1,cv2.COLOR)
+
+    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    new = cascade1.detectMultiScale(gray, 1.05, 4)
+    for (x, y, a, b) in new:
+        cv2.rectangle(img, (x, y), (x + a, y + b), (0, 255, 0), thickness=3)
+
+        img1=cv2.resize(img,(int(img.shape[1]/2),int(img.shape[0]/2)))
+        # dat1=cv2.resize(new,(int(new.shape[1]/2),))
+
+        cv2.imshow("that actucal data",img1)
+
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+    # print(img)
+# faceopencv()
+
+
+
+face recogination
+
+
+
+# # # fake
+# # # cas1=cv2.CascadeClassifier("C:\\Users\Ajay Singh Jadoun\PycharmProjects\\pandas")
+# # # cas1=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+# # img=cv2.imread("C:\\Users\Ajay Singh Jadoun\Pictures\\aajay.jpg")
+# #
+# # gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+# # face=cas1.detectMultiScale(gray, scaleFactor=1.05,
+# #                            minNeighbors=5)
+# # # face=cas1.detectMultiScale(gray,scaleFactor=1.05,minNeighbors=5)
+# # for x,y,w,h in face:
+# #     new=cv2.rectangle(face,(x,y),(x+w,y+h),(0,255,0),3)
+# #
+# #     resize1=cv2.resize(new,(int(new.shape[1]/2),int(new.shape[0]/2)))
+# #     cv2.imshow("that is  new idea",resize1)
+# #     cv2.waitKey(0)
+# #     cv2.destroyAllWindows()
+# # import time
+# # video=cv2.VideoCapture(0)
+# # check,frame=video.read()
+# # # time.sleep(10)
+# # cv2.imshow("capturing",frame)
+# # cv2.waitKey(0)
+# # print(check)
+# # print(frame)
+# # video.release()
+#
+#
+#
+#
+#
+#     # resiz=cv2.resize(new,int(new.shape[0/7]),int(new.shape[0]/7)))
+# # img1=cv2.cvtColor(img,cv2.COLO)
+# # cv2.imshow("that is new image",img1)
+# # resiz=cv2.resize(img,(600,600))
+# # resiz1=cv2.resize(img,(int(img.shape[1]/2),int(img.shape[0]/2)))
+# # resiz1=cv2.resize(img,(int(img.shape[1]/2),int(img.shape[0]/2)))
+# # resiz=cv2.resize(img,(int(img.shape[1]/2),int(img.shape[0]/2)))
+# # resiz=cv2.resize(a,(int(a.shape[1]/2,int(a.shape[0]/2)))
+# # b=cv2.cvtColor(a,int(a.reshape,[1]/2,int(a.reshape,[0]/2)))
+# # b=cv2.cvtColor(a,)
+# # print(a)
+# # reshape=cv2.resize(a,int(a(400,200),int(a(0\2)))
+# # cv2.imshow("ajay singh jadoun",resiz1)
+# # cv2.waitKey(0)
+# # cv2.destroyAllWindows()
+# # cv2.
+# # cv2.destroyWindow()
+
+
+image converter in bgr to gray scale
+ # def real():
+# #     a=cv2.VideoCapture("C:\\Users\Ajay Singh Jadoun\Videos\Captures\\Downloads.png")
+# #     check,frame=a.read()
+# #     funk=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
+# #
+# #     cv2.imshow("that is video",funk)
+# #     a.release()
+# #     cv2.destroyAllWindows()
+# # real()
+#
+# # cv2.waitKey()
+#     # if cv2.waitKey()=="q":
+#     #     break
+#     # cv2.destroyAllWindows()
+
+
+
+face recoding check
+
+# # facerecord()
+# def temp():
+#     video=cv2.dw=cv2.VideoCapture()
+#     video.set(3,640)
+#     video.set(4,480)
+#     video.set(10,255)
+#
+#     while True:
+#         check, video1 = video.read()
+#         cv2.imshow("new form of ajay",video1)
+#         cv2.waitkey()
+#         video.release()
+#         cv2.destroyAllWindows()
+
+
+face video recogination
+
+def faced():
+    dw=cv2.VideoCapture(1)
+    cascade1=cv2.CascadeClassifier('C:\\Users\Ajay Singh Jadoun\Downloads\\\haarcascade_frontalface_default.xml')
+
+    # cascade= cv2.CascadeClassifier('C:\\Users\Ajay Singh Jadoun\Downloads\\\haarcascade_eye.xml')
+    while True:
+    # img = cv2.imread("C:\\Users\Ajay Singh Jadoun\Pictures\\aajay.jpg")
+
+        check,frame=dw.read()
+        # img1=cv2.resize(img,(300,200))
+        gray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        new=cascade1.detectMultiScale(gray,1.05,3)
+        for (x,y,a,b) in new:
+            cv2.rectangle(frame,(x,y),(x+a,y+b),(0,255,0),thickness=3)
+
+            cv2.imshow("face recorginatition",new)
+
+            cv2.waitKey(0)
+            # if cv2.waitkey()=='q':
+            #     break
+
+        dw.release()
+        cv2.destroyAllWindows()
+        # dace()
+# face()
+
+
+
+video read function
+
+# def videoread():
+#     d=cv2.VideoCapture(0)
+#     check,frame=d.read()
+#     # =d.read("C:\\Users\Ajay Singh Jadoun\Pictures\\aajay.jpg")
+#     k=cv2.imshow("that is capture image",frame)
+#     print(check)
+#     print(frame)
+#     cv2.waitKey(0)
+#     d.release()
+#     cv2.destroyAllWindows()
+# # videoread()
+
+
+
+
+
+
+
+#
+#
+#
+
+
+
+#
