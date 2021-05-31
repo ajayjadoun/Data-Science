@@ -1,0 +1,232 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import matplotlib.pyplot as plt
+#matplotlib=====Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides an object-oriented API for embedding plots into applications using general-purpose GUI toolkits like Tkinter, wxPython, Qt, or GTK+.
+#Matplotlib is the whole package; pylab is a module in matplotlib.
+#Pyplot provides the state-machine interface to the underlying plotting library in matplotlib.
+
+
+# In[2]:
+
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4],[1,4,9,16])
+
+
+# In[6]:
+
+
+plt.plot([1,2,3,4],[1,4,9,16],'ro')# used for dots
+#plt.plot([1,2,3,4],[1,4,9,16])
+
+plt.axis([0, 6, 0, 20])
+plt.grid()
+plt.show()
+
+
+# In[7]:
+
+
+x=[1,2,3,4,5,6,7,8,9,10]
+y=[1,2,3,4,5,6,7,8,9,10]
+plt.plot(x,y)
+#plt.show()
+plt.xlabel("emp_experience")
+plt.ylabel("emp_salary")
+plt.title("emp_salary v/s emp_experience")
+plt.show()
+#plt.grid()
+
+
+# In[ ]:
+
+
+
+
+
+# In[11]:
+
+
+import matplotlib.pyplot as plt
+age=[20,30,40,50,60,70]
+google=[10000,20000,35000,40000,500,3456]
+facebook=[2356,45678,50000,5689,12,40000]
+plt.plot(age,google,marker="*")
+plt.plot(age,facebook)
+plt.xlabel("age")
+plt.ylabel("salary")
+plt.grid()
+#plt.legend()
+plt.show()
+
+
+# In[7]:
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+exp=[int(x)for x in input("enter exp").split()]
+exp
+salary_google=[int(y)for y in input("enter salary").split()]
+salary_google
+salary_youtube=[int(y)for y in input("enter salary").split()]
+plt.plot(exp,salary_google)
+plt.show()
+
+
+# In[20]:
+
+
+import matplotlib.pyplot as plt
+a="why are i will be hire you"
+b="what are you will be doing"
+print(len(b))
+l=[]
+l1=[]
+for i in a:
+    print(i)
+    v=ord(str(i))
+    l.append(v)
+print(l,end=" ")  
+for i1 in b:
+    print(i1)
+    v1=ord(i1)
+    l1.append(v1)
+print(l1,end=" ")  
+l1
+print(l1,end=" ")
+plt.plot(l,l1)
+plt.show()
+
+    
+
+
+# In[23]:
+
+
+import matplotlib.pyplot as plt
+t=np.arange(0.0,2.0,0.01)
+#s=1+np.cos(2*np.pi*t)
+s=1+np.sin(2*np.pi*t)
+plt.plot(t,s)
+plt.grid()
+plt.show()
+
+
+# In[28]:
+
+
+import matplotlib.pyplot as plt
+s="@!#$%^&*"
+s1="~({[=+-/"
+print(len(s))
+print(len(s1))
+l=[]
+l1=[]
+for i in s:
+    print(i)
+    v=ord(str(i))
+    l.append(v)
+print(l,end=" ")  
+for i1 in s1:
+    print(i1)
+    v1=ord(i1)
+    l1.append(v1)
+print(l1,end=" ")  
+l1
+print(l1,end=" ")
+plt.plot(l,l1)
+plt.show()
+
+
+# In[18]:
+
+
+#subplot=it is function which is used to play more then one graph inside a single region.
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+x1=np.linspace(0.0,5.0)
+x2=np.linspace(0.0,2.0)
+y1=np.cos(2*np.pi*x1)*np.exp(-x1)
+y2=np.cos(2*np.pi*x2)
+plt.subplot(1,1,1)
+plt.plot(x1,y1,color="red",label="exp graph",linestyle="--")
+plt.grid()
+plt.title("exp graph")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.show()
+
+plt.subplot(1,1,1)
+plt.plot(x2,y2,label="cos graph",linestyle="dashed",marker="*")
+plt.title("cos graph")
+plt.grid()
+plt.legend()
+plt.show()
+
+
+# In[2]:
+
+
+#histro graph
+#bar graph
+import numpy as np
+import matplotlib.pyplot as plt
+x1=[1,2,3,4,5]
+y1=[50,60,40,80,90]
+month_name=['jan','fab','march','april','may']
+plt.bar(x1,month_name,color=['red','green','blue','pink','yellow'])
+plt.show()
+
+
+# In[3]:
+
+
+#histrogram=
+import numpy as np
+import matplotlib.pyplot as plt
+print(plt.style.available)
+
+
+# In[4]:
+
+
+#plt.style.use('dark_background')
+x=[1,2,3,4,5]
+y=[200,3000,400,60,30]
+label=['jaipur','kota','ajmer','udaipur','jodhpur']
+plt.bar(x,y,edgecolor="red")
+plt.tight_layout()
+plt.xkcd()
+
+plt.show()
+
+
+# In[2]:
+
+
+#hisrogram=used to shows the large amount of data graph such as led tv.it is also used to represt the mathmatical graph.
+import matplotlib.pyplot as plt
+import numpy as np
+age=[2,50,70,40,30,45,50,45,43,40,44,3,4,5,6,7,8,10,23,4,6,8,9,0]
+bins=[0,25,50,75,100]
+plt.hist(age,bins,histtype='bar')
+plt.show()
+
+
+# In[2]:
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+g=np.random.randint(18,40,(100))
+amazon=np.random.randint(15,45,(100))
+
+bins=[15,20,25,30,35,40,45]
+plt.hist(g,bins)
+
